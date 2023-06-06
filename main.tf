@@ -1,4 +1,5 @@
 data "azurerm_kubernetes_service_versions" "current" {
+  location = var.location
 }
 resource "azurerm_kubernetes_cluster" "aks-cluster" {
   name                          = var.name
